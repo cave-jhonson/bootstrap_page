@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <!-- build:css dist/pagina4.css-->
+  <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="estilos.css">
+  <link rel="stylesheet" href="node_modules/open-iconic/font/css/open-iconic-bootstrap.min.css">
+  <!-- endbuild -->
+  <title>Danilo's restaurant</title>
+
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg fixed-top bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Danilos restaurante</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"><span class="oi oi-copywriting"></span></span>
+      </button> 
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./pagina2.html">pagina2</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./pagina3.html">pagina3</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./pagina4.html">pagina4</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <header class="jumbotron">
+    <h1>Danilo's restaurant</h1>
+  </header>
+
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item " aria-current="page"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item " aria-current="page"><a href="pagina2.html">pagina2</a></li>
+        <li class="breadcrumb-item" aria-current="page"><a href="pagina3.html">pagina3</a></li>
+        <li class="breadcrumb-item active" aria-current="page">pagina4</li>
+
+    </ol>
+  </nav>
+
+<!-- tabs -->
+
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item" role="presentation">
+    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">tabla</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Pestaña2</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="messages-tab" data-bs-toggle="tab" data-bs-target="#messages" type="button" role="tab" aria-controls="messages" aria-selected="false">Mensajes</button>
+  </li>
+  
+</ul>
+<div class="tab-content" id='tabContent'>
+    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+
+      <div class="">
+        <table class="table caption-top">
+          <caption>List of users</caption>
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">First</th>
+              <th scope="col">Last</th>
+              <th scope="col">Handle</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Jacob</td>
+              <td>Thornton</td>
+              <td>@fat</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>Larry</td>
+              <td>the Bird</td>
+              <td>@twitter</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+    <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus, distinctio facere! Aliquid repellendus quaerat explicabo inventore debitis autem eos libero? Nobis sed debitis quaerat unde voluptatum quae eum deserunt laboriosam?</p>
+    </div>
+    <div class="tab-pane fade show active" id="messages" role="tabpanel" aria-labelledby="messages-tab">
+      <!-- acordeon -->
+      <div class="accordion" id="accordionExample">
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="primerItem">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#infoItem" aria-expanded="true" aria-controls="collapseOne">
+              Informacion
+            </button>
+          </h2>
+          <div id="infoItem" class="accordion-collapse collapse " aria-labelledby="primerItem" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora iusto amet cum voluptate, tenetur reprehenderit. Recusandae accusamus sunt consequuntur enim commodi unde aspernatur, quidem porro minus inventore qui pariatur. Veniam?
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Info 2
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique rem laudantium totam autem laborum sit facere consequuntur placeat, quasi labore adipisci amet voluptatem voluptatibus minus molestias non porro, libero incidunt.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              Accordion Item #3
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+  </div>
+  <footer >
+    <div class="col-sm-5 d-flex justify-content-center">Facebook</div>
+    <div class="col-sm-4">Twitter</div>
+    <div class="col-sm-2">Instagram</div>
+  </footer>
+<!-- build:js dist/pagina4.js-->
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="node_modules/popper.js/dist/popper.min.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <!-- endbuild-->
+</body>
+
+</html>

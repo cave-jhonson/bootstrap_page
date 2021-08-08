@@ -1,0 +1,70 @@
+/* variables */
+
+$header:#3afcf2;
+$letra: rgb(4, 35, 43);
+
+@mixin margenes($top, $bottom) {
+    margin-top: $top;
+    margin-bottom: $bottom;
+}
+
+body {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+}
+
+
+.navbar-toggler {
+    color: $letra;
+}
+
+
+.container-1,
+.container-2 {
+    justify-content: center;
+    gap: 1rem;
+    width: 90%;
+    height: 30vh;
+    @include margenes(20px, 30px)
+}
+
+.jumbotron {
+    height: 120px;
+    text-align: center;
+    background-color: $header;
+    margin-bottom: 3rem;
+    margin-top: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer {
+    background-color: $header;
+    height: 90px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.card-comida {
+    width: 200px;
+    height: 140px;
+    margin-bottom: 8rem;
+    margin-top: 8rem;
+}
+
+.carousel-inner img {
+    height: 400px;
+    width: 600px;
+    margin: 0 auto;
+}
+
+.carousel-iner {
+    height: 400px;
+    width: 600px;
+    margin: 0 auto;
+}

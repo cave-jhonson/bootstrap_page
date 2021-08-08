@@ -1,3 +1,244 @@
-<!-- npm run dev: en caso de que uses lite-server para correr proyectos -->
-<!-- touch .gitignore: crea el git ignore automaticamente, touch crea cualquier archivo -->
-<!-- vim <archivo>: modificar un archivo desde la terminal -->
+<!DOCTYPE html>
+<html lang="en">
+  <!-- herramientas npm para salida y version distribuible del proyecto para poner en el servidor
+
+  npm install --save-dev onchange rimraf: monitoriar cambios en archivos e indicar alguna tarea cuando se
+  modifica la ruta, se ejecuta una tarea cuando hay un cambio en lso archivos
+  
+  npm install --save concurrently: para ejecutar cambios y recargar el server automaticamente
+
+  npm install --save copyfiles: copiar los archivos y poner en carpetas
+
+  npm install compress-images --save-dev: comprimir imagenes
+
+  "clean": "rimraf dist": borrado profundo para dar espacio a las nuevas versiones distribuibles
+
+    "clean": "rimraf dist",
+    "imagemin": "imagemin img/* --out-dir dist/img",
+    "start": "concurrently \"npm run watch:scss\" \" npm run dev\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass -o css/ css/",
+    "watch:scss": "onchange \"src/css/*.scss\" -- npm run build:scss",
+
+-->
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- build:css dist/index.css-->
+    <link
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="estilos.css" />
+    <link
+      rel="stylesheet"
+      href="node_modules/open-iconic/font/css/open-iconic-bootstrap.min.css"
+    />
+    <!-- endbuild -->
+    <title>Danilo's restaurant</title>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg fixed-top bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Danilos restaurante</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"
+            ><span class="oi oi-copywriting"></span
+          ></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./pagina2.html">pagina2</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./pagina3.html">pagina3</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./pagina4.html">pagina4</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Dropdown
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <header class="jumbotron">
+      <h1>Danilo's restaurant</h1>
+    </header>
+
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item active" aria-current="page">Home</li>
+      </ol>
+    </nav>
+    <br />
+    <br />
+    <!-- Carousel -->
+    <div
+      id="carouselExampleControls"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="https://www.saludminimalista.com/wp-content/uploads/2019/05/IMG_4940.jpg"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://media.istockphoto.com/photos/interior-composition-with-a-soft-armchair-a-table-and-a-golden-lamp-picture-id1220122049?s=612x612"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://cdn.pixabay.com/photo/2018/01/27/12/35/minimalism-3111110_960_720.jpg"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleControls"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleControls"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <div class="row container-1 d-flex flex-wrap">
+      <div class="col-sm-3">
+        <span>comida1</span>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam,
+          quibusdam.
+        </p>
+        <button
+          class="btn btn-primary"
+          data-bs-toggle="tooltip"
+          data-bs-placement="top"
+          title="Tooltip on top"
+        >
+          Click me
+        </button>
+      </div>
+      <div class="col-sm-3">
+        <span>comida1</span>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam,
+          quibusdam.
+        </p>
+        <button class="btn btn-primary">Click me</button>
+      </div>
+      <div class="col-sm-3">
+        <span>comida1</span>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam,
+          quibusdam.
+        </p>
+        <button class="btn btn-primary">Click me</button>
+      </div>
+    </div>
+
+    <div class="row container-2 d-flex flex-wrap">
+      <div class="col-sm-3">
+        <span>comida2</span>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam,
+          quibusdam.
+        </p>
+        <button class="btn btn-primary">Click me</button>
+      </div>
+
+      <div class="col-sm-3">
+        <span>comida2</span>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam,
+          quibusdam.
+        </p>
+        <button class="btn btn-primary">Click me</button>
+      </div>
+
+      <div class="col-sm-3">
+        <span>comida2</span>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam,
+          quibusdam.
+        </p>
+        <button class="btn btn-primary">Click me</button>
+      </div>
+    </div>
+
+    <footer>
+      <div class="col-sm-5 d-flex justify-content-center">Facebook</div>
+      <div class="col-sm-4">Twitter</div>
+      <div class="col-sm-2">Instagram</div>
+    </footer>
+    <!-- build:js dist/index.js-->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/popper.js/dist/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>

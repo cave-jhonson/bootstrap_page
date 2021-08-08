@@ -4,7 +4,9 @@
   "description": "proyecto web empleando bootstrap, derechos no reservados",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "imagemin": "imagemin images/* --out-dir dist/images ",
+    "usemin": "usemin index.html -d dist --htmlmin -o dist/index.html && usemin pagina2.html -d dist --htmlmin -o dist/pagina2.html && usemin pagina3.html -d dist --htmlmin -o dist/pagina3.html && usemin pagina4.html -d dist --htmlmin -o dist/pagina4.html",
+    "build": "npm run imagemin && npm run usemin"
   },
   "repository": {
     "type": "git",
@@ -22,5 +24,22 @@
   "bugs": {
     "url": "https://github.com/cave-jhonson/bootstrap_page/issues"
   },
-  "homepage": "https://github.com/cave-jhonson/bootstrap_page#readme"
+  "homepage": "https://github.com/cave-jhonson/bootstrap_page#readme",
+  "dependencies": {
+    "bootstrap": "^5.0.2",
+    "concurrently": "^6.2.0",
+    "jquery": "^3.6.0",
+    "open-iconic": "^1.1.1",
+    "popper.js": "^1.16.1"
+  },
+  "devDependencies": {
+    "compress-images": "^1.9.9",
+    "cssmin": "^0.4.3",
+    "htmlmin": "0.0.7",
+    "node-sass": "^6.0.1",
+    "onchange": "^7.1.0",
+    "rimraf": "^3.0.2",
+    "uglify": "^0.1.5",
+    "usemin-cli": "^0.6.0"
+  }
 }
